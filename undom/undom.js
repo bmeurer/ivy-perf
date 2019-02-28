@@ -79,25 +79,25 @@ class Text extends Node {
 	}
 }
 
-function serialize(el) {
- if (el.nodeType === 3) {
-   return escape(el.textContent);
- } else {
-   const nodeName = el.nodeName;
-   let s = '<' + nodeName;
-   const attributes = el.attributes;
-   if (attributes !== null) {
-     for (const [key, value] of attributes) {
-       s += ' ' + key + '="' + escapeAttr(value) + '"';
-     }
-   }
-   s += '>';
-   for (let c = el.firstChild; c !== null; c = c.nextSibling) {
-     s += serialize(c);
-   }
-   s += '</' + nodeName + '>';
-   return s;
- }
+function serialize(el, s = '<!DOCTYPE html>') {
+  if (el.nodeType === 3) {
+    return s + escape(el.textContent);
+  } else {
+    const nodeName = el.nodeName;
+    s = s + '<' + nodeName;
+    const attributes = el.attributes;
+    if (attributes !== null) {
+      for (const [key, value] of attributes) {
+        s = s + ' ' + key + '="' + escapeAttr(value) + '"';
+      }
+    }
+    s = s + '>';
+    for (let c = el.firstChild; c !== null; c = c.nextSibling) {
+      s = serialize(c, s);
+    }
+    s = s + '</' + nodeName + '>';
+    return s;
+  }
 }
 
 function escape(s) {
