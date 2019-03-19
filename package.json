@@ -24,8 +24,8 @@
     "@angular/platform-browser": "git://github.com/angular/platform-browser-builds.git#master-ivy-aot",
     "@angular/platform-browser-dynamic": "git://github.com/angular/platform-browser-dynamic-builds.git#master-ivy-aot",
     "@angular/platform-server": "git://github.com/angular/platform-server-builds.git#master-ivy-aot",
-    "@angular/router": "^7.2.7",
-    "@nguniversal/express-engine": "^7.1.0",
+    "@angular/router": "^7.2.9",
+    "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "v7.0.2",
     "core-js": "^2.6.5",
     "express": "^4.15.2",
@@ -37,14 +37,14 @@
     "@angular-devkit/build-angular": "^0.12.4",
     "@angular/cli": "git://github.com/angular/cli-builds.git",
     "@angular/compiler-cli": "git://github.com/angular/compiler-cli-builds.git#master-ivy-aot",
-    "@angular/language-service": "^7.2.7",
+    "@angular/language-service": "^7.2.9",
     "@types/jasmine": "^2.8.16",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^4.0.0",
+    "karma": "^4.0.1",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.5",
     "karma-jasmine": "~1.1.2",
@@ -54,6 +54,6 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^3.3.3333",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.0"
   }
 }
